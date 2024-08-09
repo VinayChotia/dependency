@@ -1,0 +1,479 @@
+digraph {
+	"/"
+	children
+	"/" -> children
+	"/rest/admin/application-configuration"
+	children -> "/rest/admin/application-configuration"
+	children
+	"/rest/admin/application-configuration" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/socket.io/"
+	children -> "/socket.io/"
+	"/rest/admin/application-version"
+	children -> "/rest/admin/application-version"
+	children
+	"/rest/admin/application-version" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/Challenges/"
+	children -> "/api/Challenges/"
+	children
+	"/api/Challenges/" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/languages"
+	children -> "/rest/languages"
+	children
+	"/rest/languages" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/Quantitys/"
+	children -> "/api/Quantitys/"
+	children
+	"/api/Quantitys/" -> children
+	"/api/Complaints/"
+	children -> "/api/Complaints/"
+	"/api/Challenges/"
+	children -> "/api/Challenges/"
+	"/rest/products/search"
+	children -> "/rest/products/search"
+	"/api/Cards/"
+	children -> "/api/Cards/"
+	"/api/Feedbacks/"
+	children -> "/api/Feedbacks/"
+	"/api/Addresss/"
+	children -> "/api/Addresss/"
+	"/rest/saveLoginIp"
+	children -> "/rest/saveLoginIp"
+	"/api/Cards"
+	children -> "/api/Cards"
+	"/rest/products/search"
+	children -> "/rest/products/search"
+	children
+	"/rest/products/search" -> children
+	"/api/Complaints/"
+	children -> "/api/Complaints/"
+	"/api/Challenges/"
+	children -> "/api/Challenges/"
+	"/api/Cards/"
+	children -> "/api/Cards/"
+	"/api/Feedbacks/"
+	children -> "/api/Feedbacks/"
+	"/api/Quantitys/"
+	children -> "/api/Quantitys/"
+	"/api/Addresss/"
+	children -> "/api/Addresss/"
+	"/rest/saveLoginIp"
+	children -> "/rest/saveLoginIp"
+	"/api/Cards"
+	children -> "/api/Cards"
+	"/font-mfizz.woff"
+	children -> "/font-mfizz.woff"
+	"/assets/public/favicon_js.ico"
+	children -> "/assets/public/favicon_js.ico"
+	"/api/SecurityQuestions/"
+	children -> "/api/SecurityQuestions/"
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/api/SecurityAnswers/"
+	children -> "/api/SecurityAnswers/"
+	"/rest/user/whoami"
+	children -> "/rest/user/whoami"
+	children
+	"/rest/user/whoami" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/basket/6"
+	children -> "/rest/basket/6"
+	children
+	"/rest/basket/6" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/1/reviews"
+	children -> "/rest/products/1/reviews"
+	children
+	"/rest/products/1/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	children
+	"/rest/products/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/24/reviews"
+	children -> "/rest/products/24/reviews"
+	children
+	"/rest/products/24/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/6/reviews"
+	children -> "/rest/products/6/reviews"
+	children
+	"/rest/products/6/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/30/reviews"
+	children -> "/rest/products/30/reviews"
+	children
+	"/rest/products/30/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/3/reviews"
+	children -> "/rest/products/3/reviews"
+	children
+	"/rest/products/3/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/25/reviews"
+	children -> "/rest/products/25/reviews"
+	children
+	"/rest/products/25/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/BasketItems/"
+	children -> "/api/BasketItems/"
+	children
+	"/api/BasketItems/" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/Products/22"
+	children -> "/api/Products/22"
+	children
+	"/api/Products/22" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/22/reviews"
+	children -> "/rest/products/22/reviews"
+	children
+	"/rest/products/22/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/Products/1"
+	children -> "/api/Products/1"
+	children
+	"/api/Products/1" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/Products/24"
+	children -> "/api/Products/24"
+	children
+	"/api/Products/24" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/Products/6"
+	children -> "/api/Products/6"
+	children
+	"/api/Products/6" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/Products/30"
+	children -> "/api/Products/30"
+	children
+	"/api/Products/30" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/Products/3"
+	children -> "/api/Products/3"
+	children
+	"/api/Products/3" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/Products/25"
+	children -> "/api/Products/25"
+	children
+	"/api/Products/25" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/41/reviews"
+	children -> "/rest/products/41/reviews"
+	children
+	"/rest/products/41/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/Products/41"
+	children -> "/api/Products/41"
+	children
+	"/api/Products/41" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/39/reviews"
+	children -> "/rest/products/39/reviews"
+	children
+	"/rest/products/39/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/40/reviews"
+	children -> "/rest/products/40/reviews"
+	children
+	"/rest/products/40/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/Products/40"
+	children -> "/api/Products/40"
+	children
+	"/api/Products/40" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/27/reviews"
+	children -> "/rest/products/27/reviews"
+	children
+	"/rest/products/27/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/5/reviews"
+	children -> "/rest/products/5/reviews"
+	children
+	"/rest/products/5/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/Products/5"
+	children -> "/api/Products/5"
+	children
+	"/api/Products/5" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/33/reviews"
+	children -> "/rest/products/33/reviews"
+	children
+	"/rest/products/33/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/38/reviews"
+	children -> "/rest/products/38/reviews"
+	children
+	"/rest/products/38/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/Products/33"
+	children -> "/api/Products/33"
+	children
+	"/api/Products/33" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/8/reviews"
+	children -> "/rest/products/8/reviews"
+	children
+	"/rest/products/8/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/Products/8"
+	children -> "/api/Products/8"
+	children
+	"/api/Products/8" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/34/reviews"
+	children -> "/rest/products/34/reviews"
+	children
+	"/rest/products/34/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/37/reviews"
+	children -> "/rest/products/37/reviews"
+	children
+	"/rest/products/37/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/Products/19"
+	children -> "/api/Products/19"
+	children
+	"/api/Products/19" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/19/reviews"
+	children -> "/rest/products/19/reviews"
+	children
+	"/rest/products/19/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/Products/13"
+	children -> "/api/Products/13"
+	children
+	"/api/Products/13" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/13/reviews"
+	children -> "/rest/products/13/reviews"
+	children
+	"/rest/products/13/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/26/reviews"
+	children -> "/rest/products/26/reviews"
+	children
+	"/rest/products/26/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/Products/14"
+	children -> "/api/Products/14"
+	children
+	"/api/Products/14" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/14/reviews"
+	children -> "/rest/products/14/reviews"
+	children
+	"/rest/products/14/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/Products/18"
+	children -> "/api/Products/18"
+	children
+	"/api/Products/18" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/rest/products/18/reviews"
+	children -> "/rest/products/18/reviews"
+	children
+	"/rest/products/18/reviews" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/products/reviews"
+	children -> "/rest/products/reviews"
+	"/rest/user/"
+	children -> "/rest/user/"
+	"/api/Products/15"
+	children -> "/api/Products/15"
+	children
+	"/api/Products/15" -> children
+	"/api/Users/"
+	children -> "/api/Users/"
+	"/rest/user/"
+	children -> "/rest/user/"
+}

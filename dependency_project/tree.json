@@ -1,0 +1,631 @@
+[
+	{
+	  "node": "/",
+	  "children": [
+		
+		{
+		  "node": "rest/admin/application-configuration",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "socket.io",
+		  "children": []
+		},
+		{
+		  "node": "rest/admin/application-version",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "api/Challenges",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "rest/languages",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "api/Quantitys",
+		  "children": [
+			{
+			  "node": "/api/Cards/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Challenges/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Addresss",
+			  "children": []
+			},
+			{
+			  "node": "/rest/products/search",
+			  "children": []
+			},
+			{
+			  "node": "/api/Complaints/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/saveLoginIp",
+			  "children": []
+			},
+			{
+			  "node": "/api/Feedbacks/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Cards",
+			  "children": []
+			},
+			{
+			  "node": "/api/Addresss/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "rest/products/search",
+		  "children": [
+			{
+			  "node": "/api/Cards/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Challenges/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Addresss",
+			  "children": []
+			},
+			{
+			  "node": "/api/Complaints/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/saveLoginIp",
+			  "children": []
+			},
+			{
+			  "node": "/api/Feedbacks/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Quantitys/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Cards",
+			  "children": []
+			},
+			{
+			  "node": "/api/Addresss/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "font-mfizz.woff",
+		  "children": []
+		},
+		{
+		  "node": "api/SecurityQuestions",
+		  "children": []
+		},
+		{
+		  "node": "api/Users",
+		  "children": []
+		},
+		{
+		  "node": "api/SecurityAnswers",
+		  "children": []
+		},
+		{
+		  "node": "rest/user/whoami",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "rest/user",
+		  "children": []
+		},
+		{
+		  "node": "rest/basket/{id}",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "rest/products/{id}/reviews",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/products/reviews",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "rest/products/reviews",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "api/BasketItems",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "api/Products/{id}",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "api/BasketItems/{id}",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			},
+			{
+			  "node": "/api/BasketItems/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "profile",
+		  "children": []
+		},
+		{
+		  "node": "profile/image/file",
+		  "children": [
+			{
+			  "node": "/profile",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "rest/order-history",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "api/Recycles",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "api/Addresss",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Challenges/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/products/search",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Quantitys/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Addresss/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "api/Cards",
+		  "children": [
+			{
+			  "node": "/api/Cards/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Challenges/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Addresss",
+			  "children": []
+			},
+			{
+			  "node": "/rest/products/search",
+			  "children": []
+			},
+			{
+			  "node": "/api/Complaints/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Feedbacks/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Quantitys/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Addresss/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "rest/wallet/balance",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "rest/continue-code",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "rest/user/change-password",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "rest/2fa/status",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "rest/captcha",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "api/Feedbacks",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Challenges/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Addresss",
+			  "children": []
+			},
+			{
+			  "node": "/rest/products/search",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Quantitys/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Addresss/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "api/Complaints",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Challenges/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Addresss",
+			  "children": []
+			},
+			{
+			  "node": "/rest/products/search",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Feedbacks/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Quantitys/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Addresss/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "rest/chatbot/status",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/chatbot/respond",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "rest/chatbot/respond",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/chatbot/status",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "rest/memories",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "assets/public/images/uploads/%F0%9F%98%BC-",
+		  "children": []
+		},
+		{
+		  "node": "rest/deluxe-membership",
+		  "children": [
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			}
+		  ]
+		},
+		{
+		  "node": "rest/saveLoginIp",
+		  "children": [
+			{
+			  "node": "/api/Cards/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/2fa/status",
+			  "children": []
+			},
+			{
+			  "node": "/api/Users/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Challenges/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Addresss",
+			  "children": []
+			},
+			{
+			  "node": "/rest/products/search",
+			  "children": []
+			},
+			{
+			  "node": "/api/Complaints/",
+			  "children": []
+			},
+			{
+			  "node": "/rest/user/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Feedbacks/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Quantitys/",
+			  "children": []
+			},
+			{
+			  "node": "/api/Cards",
+			  "children": []
+			},
+			{
+			  "node": "/api/Addresss/",
+			  "children": []
+			}
+		  ]
+		}
+	  ]
+	}
+  ]
+  
