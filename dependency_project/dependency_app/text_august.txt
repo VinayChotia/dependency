@@ -1,0 +1,77 @@
+def generalize_path(path):
+    generalized_path = []
+    for part in path.split('/'):
+        if part.isdigit():
+            generalized_path.append('{id}')
+        else:
+            generalized_path.append(part)
+    return '/'.join(generalized_path)
+
+# Function to build the execution flow and dependency tree
+def build_execution_flow(endpoints, root_node=None):
+    tree = defaultdict(dict)
+    execution_flow = []
+    visited = set()
+
+    def process_path(path, dependencies):
+        generalized_path = generalize_path(path)
+        if '{id}' in generalized_path or generalized_path in visited:
+            return
+        visited.add(generalized_path)
+        refined_dependencies = []
+        for dep in dependencies:
+            generalized_dep = generalize_path(dep)
+            if '{id}' not in generalized_dep and generalized_dep not in visited:
+                tree[generalized_path][generalized_dep] = {}
+                refined_dependencies.append(generalized_dep)
+        execution_flow.append((generalized_path, refined_dependencies))
+
+    if root_node:
+        # Ensure the root node is processed first
+        if root_node in endpoints:
+            process_path(root_node, endpoints[root_node])
+            endpoints = {k: v for k, v in endpoints.items() if k != root_node}
+
+    for path, dependencies in endpoints.items():
+        process_path(path, dependencies)
+
+    return tree, execution_flow
+
+def fetch_endpoints_data():
+    endpoints_data = {}
+    endpoints = Endpoints.objects.all()  
+    for endpoint in endpoints:
+        path = endpoint.path
+        dependencies = eval(endpoint.dependency_list)  
+        endpoints_data[path] = dependencies
+    return endpoints_data
+
+def visualize_execution_flow_with_dependencies(execution_flow):
+    dot = Digraph(comment='API Execution Flow with Dependencies')
+
+    for i, (current_node, dependencies) in enumerate(execution_flow):
+        dot.node(current_node, current_node)
+
+        if i > 0:
+            previous_node = execution_flow[i-1][0]
+            dot.edge(previous_node, current_node)
+        
+        for dep in dependencies:
+            dot.node(dep, dep)
+            dot.edge(current_node, dep)
+
+    return dot.pipe(format='png')
+
+class ApiExecutionFlowView(View):
+    def get(self, request):
+        # Retrieve the stored login endpoint
+        login_endpoint = cache.get('login_endpoint')
+
+        # Fetch endpoints data
+        endpoints_data = fetch_endpoints_data()
+
+        # Build the execution flow with the login endpoint as root if available
+        dependency_tree, execution_flow = build_execution_flow(endpoints_data, root_node=login_endpoint)
+        graph_image = visualize_execution_flow_with_dependencies(execution_flow)
+
+        return HttpResponse(graph_image, content_type='image/png')

@@ -6,8 +6,9 @@ from .views import *
 
 urlpatterns = [
     path('upload/', UploadHarFile.as_view()),
-    path('export-endpoints/', ExportEndpointsData.as_view(), name='export-endpoints'),
-    path('image/',ApiExecutionFlowView.as_view(),name = 'export-png')
+    # # path('export-endpoints/', ExportEndpointsData.as_view(), name='export-endpoints'),
+    path('image/',ApiExecutionFlowView.as_view(),name = 'export-png'),
+    path('execution/',ExecutionFlow.as_view(),name = 'Execution Flow')
     # path('test/',GetData.as_view()),
 
 ]

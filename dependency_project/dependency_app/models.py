@@ -21,7 +21,11 @@ class Endpoints(models.Model):
     responsebody = models.TextField(blank=True)
     authentication = models.TextField(blank=True,null=True)
     dependency_list = models.TextField(blank=True,null=True)
+    dependency_list_sorted = models.TextField(blank = True, null=True)
     # dependencies = models.ManyToManyField('self', blank=True,)
+    login_endpoint = models.CharField(max_length=200,null = True)
+    start_date_time = models.DateTimeField(null=True, blank=True)
+    
     
 
     def __str__(self):
