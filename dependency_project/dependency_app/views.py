@@ -1,10 +1,9 @@
-import json
 from rest_framework.response import Response
 from rest_framework import status
 from .serializers import FileUploadSerializer
 from .models import HarFile, Endpoints
 from rest_framework.views import APIView
-from rest_framework.parsers import MultiPartParser, FormParser
+from rest_framework.parsers import MultiPartParser, FormParser,JSONParser
 from urllib.parse import urlparse
 import os
 from django.views import View
@@ -15,6 +14,11 @@ from collections import defaultdict
 import re
 from drf_yasg.utils import swagger_auto_schema
 from datetime import datetime
+from rest_framework import status
+from django.core.files.storage import default_storage
+import json
+import graphviz
+from django.conf import settings
 
 def extract_login_from_url(url):
     match = re.search(r'login', url, re.IGNORECASE)
@@ -56,6 +60,26 @@ class Trie:
 
         dfs(node, segments)
         return list(similar_paths)
+
+class APIExecutionTree:
+    def __init__(self):
+        self.tree = defaultdict(list)
+        self.seen_paths = set()
+
+    def add_dependency(self, parent, child):
+        if child not in self.seen_paths:
+            self.tree[parent].append(child)
+            self.seen_paths.add(child)
+
+    def build_tree(self, dependency_dict):
+        for parent, children in dependency_dict.items():
+            for child in children:
+                self.add_dependency(parent, child)
+                
+    def get_tree(self):
+        return self.tree
+
+
 
 
 class UploadHarFile(APIView):
@@ -477,13 +501,24 @@ def build_execution_flow(endpoints):
     return tree, execution_flow
 
 
+
+
+
 def fetch_endpoints_data():
     endpoints_data = {}
+    login_endpoint = None
+    login_endpoint = Endpoints.login_endpoint
+    
+    
     endpoints = Endpoints.objects.all()  
+    
     for endpoint in endpoints:
         path = endpoint.path
-        dependencies = eval(endpoint.dependency_list) if endpoint.dependency_list else []
+        login_endpoint = endpoint.login_endpoint
+        dependencies = eval(endpoint.dependency_list_sorted) if endpoint.dependency_list_sorted else []
         endpoints_data[path] = dependencies
+    
+        
     return endpoints_data
 
 
@@ -500,30 +535,15 @@ def visualize_execution_flow_with_dependencies(execution_flow):
         for dep in dependencies:
             dot.node(dep, dep)
             dot.edge(current_node, dep)
-
-    return dot.pipe(format='png')
-from django.conf import settings
-import os
-
-def visualize_execution_flow_with_dependencies(execution_flow):
-    dot = Digraph(comment='API Execution Flow with Dependencies')
-
-    for i, (current_node, dependencies) in enumerate(execution_flow):
-        dot.node(current_node, current_node)
-
-        if i > 0:
-            previous_node = execution_flow[i-1][0]
-            dot.edge(previous_node, current_node)
-        
-        for dep in dependencies:
-            dot.node(dep, dep)
-            dot.edge(current_node, dep)
-
+    
+   
     # Save to a file
     file_path = os.path.join(settings.MEDIA_ROOT, 'execution_flow')
     dot.render(filename=file_path, format='png', cleanup=True)
 
     return file_path
+
+
 
 class ApiExecutionFlowView(View):
     def get(self, request):
@@ -531,70 +551,5 @@ class ApiExecutionFlowView(View):
         dependency_tree, execution_flow = build_execution_flow(endpoints_data)
         graph_image = visualize_execution_flow_with_dependencies(execution_flow)
         return HttpResponse(graph_image, content_type='image/png')
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework.parsers import MultiPartParser, JSONParser
-from rest_framework import status
-from django.core.files.storage import default_storage
-import json
-import re
-import os
-import graphviz
 
-class ExecutionFlow(APIView):
-    parser_classes = [MultiPartParser, JSONParser]
 
-    def generalize_path(self, url):
-        
-        # Example generalization: replace everything after '?' with '?'
-        path, _, query = url.partition('?')
-        generalized_path = re.sub(r'/[^/]+', '/{param}', path)
-        if query:
-            generalized_path += f'?{query}'
-        return generalized_path
-
-    def post(self, request, *args, **kwargs):
-        if 'file' not in request.FILES:
-            return Response({"error": "No file provided."}, status=status.HTTP_400_BAD_REQUEST)
-
-        har_file = request.FILES['file']
-        file_path = default_storage.save('temp_har_file.har', har_file)
-
-        try:
-            with open(file_path, 'r',encoding = 'utf-8') as f:
-                har_data = json.load(f)
-
-            # Generalize the URLs in the HAR file
-            for entry in har_data['log']['entries']:
-                entry['request']['url'] = self.generalize_path(entry['request']['url'])
-
-            # Extracting and sorting entries based on start time
-            entries = []
-            for entry in har_data['log']['entries']:
-                url = entry['request']['url']
-                start_time = entry['startedDateTime']
-                entries.append((start_time, url))
-
-            entries.sort()
-
-            # Create a digraph to represent the execution order
-            dot = graphviz.Digraph(comment='API Execution Order')
-            previous_node = None
-
-            for index, (start_time, url) in enumerate(entries):
-                current_node = f'Node{index}'
-                dot.node(current_node, url)
-                if previous_node:
-                    dot.edge(previous_node, current_node)
-                previous_node = current_node
-
-            # Save the digraph as an image
-            image_path = 'execution_flow'
-            dot.render(image_path, format='png')
-
-            os.remove(file_path)
-
-            return Response({"image_path": f"{image_path}.png"}, status=status.HTTP_200_OK)
-
-        except Exception as e:
-            return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
